@@ -4,6 +4,8 @@ Interactive, browser-based visualizations for learning the basics of quantum com
 
 Built with React, TypeScript, Vite, React Three Fiber and shadcn/ui.
 
+**Live demo:** https://quantum-computing-visualizations.leodriesch.workers.dev
+
 ## Visualizations
 
 ### Quantum Gates
@@ -42,3 +44,5 @@ A step-by-step animation of Grover's search on 4 qubits (16 basis states).
 ```bash
 npm install && npm run dev
 ```
+
+Deploy to Cloudflare Workers with `npm run deploy`.
