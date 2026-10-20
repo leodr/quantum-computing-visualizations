@@ -37,54 +37,8 @@ A step-by-step animation of Grover's search on 4 qubits (16 basis states).
 - Each qubit has its own Bloch sphere showing its reduced state. Vectors shorter than the sphere's radius mean the qubit is entangled with the others.
 - The amplitude chart shows the oracle flipping the sign of the marked state and the diffusion step increasing its amplitude, until the target reaches about 96% probability after three iterations.
 
-## Getting started
-
-Requires Node.js 20.19+ or 22.12+ (needed by Vite 8).
+## Development
 
 ```bash
-npm install
+npm install && npm run dev
 ```
-
-```bash
-npm run dev
-```
-
-Then open the URL Vite prints (usually http://localhost:5173).
-
-Other scripts:
-
-| Command | Description |
-|---------|-------------|
-| `npm run build` | Type-check and build for production into `dist/` |
-| `npm run preview` | Serve the production build locally |
-| `npm run lint` | Run ESLint |
-
-## Project structure
-
-```
-src/
-├── components/
-│   ├── AppShell.tsx           # Top navigation bar and list of visualizations
-│   ├── quantum-gates/         # Bloch sphere and gate controls
-│   ├── euler-formula/         # Complex unit circle
-│   ├── grovers-algorithm/     # Grover's search on 4 qubits
-│   └── ui/                    # shadcn/ui components
-└── lib/
-    └── quantum.ts             # Complex numbers, gate matrices, state math
-```
-
-## Adding a visualization
-
-1. Create a directory under `src/components/`, e.g. `src/components/my-viz/`.
-2. Give the component's root element `className="flex flex-1 overflow-hidden"` so it fills the space below the nav bar.
-3. Import it in `src/components/AppShell.tsx` and add an entry to the `visualizations` array:
-
-   ```ts
-   {
-     id: "my-viz",
-     name: "My Visualization",
-     component: MyVizComponent,
-   }
-   ```
-
-The new tab appears in the nav bar automatically.
