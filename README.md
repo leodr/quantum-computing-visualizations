@@ -46,3 +46,7 @@ npm install && npm run dev
 ```
 
 Deploy to Cloudflare Workers with `npm run deploy`.
+
+## License
+
+[MIT](LICENSE)
